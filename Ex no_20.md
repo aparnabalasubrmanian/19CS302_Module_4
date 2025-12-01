@@ -18,21 +18,27 @@ Developed by: Aparna RB
 RegisterNumber:  212222220005
 */
 #include <stdio.h>
-int main() {
- char str[100];
- int i = 0;
- scanf("%s", str); 
- while (str[i] != '\0') {
- if (str[i] >= 'A' && str[i] <= 'Z') {
- str[i] = str[i] + 32; }
- i++; }
- printf("Lowercase string: %s\n", str);
- return 0;
+#include <string.h>
+int main()
+{
+  char str[30];
+  
+  scanf("%[^\n]", str);
+  int i = 0;
+  //convert capital letter string to small letter string
+  while (str[i] != '\0')
+  {
+    if (str[i] > 64 && str[i] < 91) //or if(str[i]>='A' && str[i]<='Z')
+      str[i] += 32;
+    i++;
+  }
+  printf("Lower case String is:%s", str);
 }
 ```
 
 ## Output:
-![image](https://github.com/user-attachments/assets/b6db25ec-c9ff-4205-85d6-377e79a1e236)
+<img width="1058" height="202" alt="image" src="https://github.com/user-attachments/assets/708fa749-41a2-4813-b776-f4d1116708e0" />
+
 
 ## Result:
 Thus the program was executed and the output was verified successfully.
